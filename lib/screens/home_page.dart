@@ -13,14 +13,18 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    print("------home screen build screen called------");
+
+    return Scaffold(
       appBar: AppBar(
         elevation: 0,
         backgroundColor: MyColor.backGroundColor,
       ),
       drawer: const CustomDrawer(),
       backgroundColor: MyColor.backGroundColor,
-      body: const SafeArea(child: Game()),
+      body: const SafeArea(
+        child: GridScreen(),
+      ),
     );
   }
 }
