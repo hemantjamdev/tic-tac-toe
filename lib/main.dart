@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_neumorphic/flutter_neumorphic.dart';
 import 'package:provider/provider.dart';
 import 'package:tic/constants/strings.dart';
 import 'package:tic/provider/game_provider.dart';
@@ -20,7 +21,8 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return ChangeNotifierProvider<GameProvider>(
       create: (context) => GameProvider(),
-      child: const MaterialApp(
+      child: const NeumorphicApp(
+
         debugShowCheckedModeBanner: false,
         title: Strings.gameTitle,
         themeMode: ThemeMode.system,
@@ -29,3 +31,10 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+ /*const NeumorphicStyle buttonStyle = NeumorphicStyle(
+    boxShape: NeumorphicBoxShape.circle(),
+    shape: NeumorphicShape.concave,
+    depth: 8,
+    oppositeShadowLightSource: false,
+    intensity: 8);*/

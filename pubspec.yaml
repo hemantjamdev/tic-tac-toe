@@ -37,8 +37,9 @@ dependencies:
   provider: ^6.0.2
   audioplayers: ^0.20.1
   vibration: ^1.7.3
-  o_color_picker: ^1.0.2
-  o_popup: ^1.0.1
+  #o_color_picker: ^1.0.2
+  #o_popup: ^1.0.1
+  flutter_neumorphic: ^3.2.0
 
 dev_dependencies:
   flutter_test:

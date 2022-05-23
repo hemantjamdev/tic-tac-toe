@@ -15,14 +15,9 @@ class GameProvider extends ChangeNotifier {
   String player2Name = "Player-2";
   bool player1NameEnable = false;
   bool player2NameEnable = false;
-  TextEditingController player1Controller =
-      TextEditingController(text: "Player-1");
-  TextEditingController player2Controller =
-      TextEditingController(text: "Player-2");
-  FocusNode player1Focus = FocusNode();
-  FocusNode player2Focus = FocusNode();
 
-  void enablePlayer1Field(bool value) {
+  void enablePlayer1Field(
+      {required bool value, required FocusNode player1Focus}) {
     player1NameEnable = value;
     if (value) {
       Future.delayed(const Duration(milliseconds: 10), () {
@@ -32,7 +27,8 @@ class GameProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void enablePlayer2Field(bool value) {
+  void enablePlayer2Field(
+      {required bool value, required FocusNode player2Focus}) {
     player2NameEnable = value;
     if (value) {
       Future.delayed(const Duration(milliseconds: 10), () {
@@ -42,13 +38,19 @@ class GameProvider extends ChangeNotifier {
     notifyListeners();
   }
 
-  void changePlayer1Name(String name) {
+  void changePlayer1Name({
+    required String name,
+    required TextEditingController player1Controller,
+  }) {
     player1Controller.text = name;
     player1Name = name;
     notifyListeners();
   }
 
-  void changePlayer2Name(String name) {
+  void changePlayer2Name({
+    required String name,
+    required TextEditingController player2Controller,
+  }) {
     player2Controller.text = name;
     player2Name = name;
     notifyListeners();
