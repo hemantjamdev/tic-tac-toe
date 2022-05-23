@@ -1,8 +1,10 @@
 # tic
 
 A new Flutter project.
+<img src="https://user-images.githubusercontent.com/60656624/169809387-bd308de6-a67d-439c-9579-8a4bc942883c.png" width="300" height="600">
+## Getting Started!
 
-## Getting Started
+
 
 This project is a starting point for a Flutter application.
 
